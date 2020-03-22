@@ -31,6 +31,7 @@ public class CollectionDao {
 				Collection collection = new Collection();
 				collection.setMusicName(rs.getString("music_name"));
 				collection.setMusicNo(rs.getInt("music_no"));
+				collection.setUserId(rs.getString("user_id"));
 				collection.setSinger(rs.getString("singer"));
 				
 				return collection;
@@ -40,7 +41,7 @@ public class CollectionDao {
 	
 	public void insertMusic(Collection collection) {
 		
-		String userId = collection.getUserId();
+		String userId = "test";
 		String musicName = collection.getMusicName();
 		String singer = collection.getSinger();
 		

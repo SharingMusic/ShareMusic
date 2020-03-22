@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @Controller
 public class MemberController {
@@ -15,6 +17,7 @@ public class MemberController {
 		if(error != null) {
 			model.addAttribute("errorMsg", "login_error");
 		}
+	
 		return "mem_login_form";
 	}
 	

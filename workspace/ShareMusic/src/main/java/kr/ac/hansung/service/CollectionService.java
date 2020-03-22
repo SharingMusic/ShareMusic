@@ -20,6 +20,7 @@ public class CollectionService {
 	public void insertMusic(Collection collection) {
 		collectionDao.insertMusic(collection);
 	}
+	
 
 	public void insertCollection(List<String> collectionList) {
 		Iterator<String> it = collectionList.iterator();

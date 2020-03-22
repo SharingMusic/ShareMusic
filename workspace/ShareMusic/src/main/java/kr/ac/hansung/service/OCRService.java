@@ -21,10 +21,10 @@ public class OCRService {
 	
 	public OCRService() {
 		instance = tesseract.TessBaseAPICreate();
-		instance.Init("/Users/jeon-yongho/Desktop/ShareMusic/tessdata", "eng+kor");
+//		instance.Init("/Users/jeon-yongho/Desktop/ShareMusic/tessdata", "eng+kor");
 //		instance.Init("/usr/local/share/tessdata", "eng+kor");
 //		instance.Init("/usr/CapstoneD/tessdata", "eng+kor");
-//		instance.Init("C:\\CapstoneD\\tessdata", "eng+kor");
+		instance.Init("C:\\CapstoneD\\tessdata", "eng+kor");
 		
 	}
 	
