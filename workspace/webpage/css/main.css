@@ -1,21 +1,9 @@
 @charset "UTF-8";
-:root {
-	--nav-height:10vh;
-	--main-height:70vh;
-	--main-width:98vw;
-	--horizontal-scroll-height: 50vh;
-	--form-height:10vh;
 
-}
-body{
-	font-size: 16px;
-}
-nav{
-	height:var(--nav-height);
-}
 .main{
-	
-	margin-top:var(--nav-height);
+	position: absolute;
+	top:var(--header-height);
+	margin-top:var(--header-height);
 	height:var(--main-height);
 	padding-left:1vw;
 	padding-right:1vw;
