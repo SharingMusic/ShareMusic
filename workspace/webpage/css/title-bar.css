@@ -54,18 +54,8 @@
 }
 
 .user > .dropdown {
-  
-    --border: #2F3545;
-    --borderActive: #23C4F8;
-    --background: #151924;
     --arrow: #6C7486;
     --arrowActive: #E4ECFA;
-    --listText: #99A3BA;
-    --listBackground: #F5F9FF;
-    --listActive: #E4ECFA;
-    --listTextActive: #6C7486;
-    --listBorder: none;
-    --textFilled: #99A3BA;
     
     width: 100%;
     
@@ -140,9 +130,9 @@
     transition: all .3s ease;
     
   }
-  .dropdown ul li a {
+  .dropdown ul li div {
     cursor: pointer;
-    display: block;
+  
     padding: 10px 16px;
     color: whitesmoke;
     text-decoration: none;
@@ -150,53 +140,10 @@
     position: relative;
     transition: all .3s ease;
   }
-  .dropdown ul li a:hover {
-    color: ;
+  .dropdown ul li div:hover {
+    background-color:#82c7f8;
   }
   
-  .dropdown ul li.active a {
-    color: var(--listTextActive);
-    background: var(--listActive);
-  }
-  
-  /* 리스트 우측의 x표시 */
-  .dropdown ul li.active a:before, .dropdown ul li.active a:after {
-    --scale: .6;
-    content: '';
-    display: block;
-    width: 10px;
-    height: 2px;
-    position: absolute;
-    right: 17px;
-    top: 50%;
-    opacity: 0;
-    background: var(--listText);
-    transition: all .2s ease;
-  }
-  .dropdown ul li.active a:before {
-    -webkit-transform: rotate(45deg) scale(var(--scale));
-            transform: rotate(45deg) scale(var(--scale));
-  }
-  .dropdown ul li.active a:after {
-    -webkit-transform: rotate(-45deg) scale(var(--scale));
-            transform: rotate(-45deg) scale(var(--scale));
-  }
-  .dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
-    --scale: .9;
-    opacity: 1;
-  }
-  .dropdown ul li:first-child a {
-    border-radius: 6px 6px 0 0;
-  }
-  .dropdown ul li:last-child a {
-    border-radius: 0 0 6px 6px;
-  }
-  .dropdown.filled > span {
-    color: var(--textFilled);
-  }
-  .dropdown.open > span {
-    border-color: var(--borderActive);
-  }
   .dropdown.open > span:before, .dropdown.open > span:after {
     background: var(--arrowActive);
   }
