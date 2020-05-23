@@ -1,0 +1,9 @@
+
+#View_area{
+	position:relative; 
+	width: 100px; 
+	height: 100px; 
+	color: black; 
+	border: 0px solid black; 
+	display: inline; 
+}
