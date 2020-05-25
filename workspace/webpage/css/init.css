@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-
+	--header-height:15vh;
 	--main-height:70vh;
 	--main-width:98vw;
 	--horizontal-scroll-height: 50vh;
@@ -22,6 +22,15 @@ body{
 }
 div{
     margin:0;
+}
+.main{
+	position:absolute;
+	z-index:0;
+	top:var(--header-height);
+	height:85vh;
+	width:100vw;
+	padding-left:1vw;
+	padding-right:1vw;
 }
 
 

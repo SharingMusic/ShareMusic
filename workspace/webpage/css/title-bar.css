@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .title-bar{
     position: fixed;
+    z-index:2;
     left:80px;
     top:0;
     width:100vw;
@@ -109,9 +110,11 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    z-index:inherit;
     top: 30px;
     right: 0;
-    border:2px solid #67bcf8;
+    border:4px double #67bcf8;
+    background-color:#67bcf8;
     border-radius: 6px;
     overflow: hidden;
     -webkit-transform-origin: 0 0;
@@ -123,6 +126,8 @@
             transform: scale(0.8) translate(0, 4px);
   }
   .dropdown ul li {
+    position:relative;
+    
     opacity: 0;
     text-align:right;
     -webkit-transform: translate(6px, 0);
@@ -131,6 +136,8 @@
     
   }
   .dropdown ul li div {
+    position:relative;
+    
     cursor: pointer;
   
     padding: 10px 16px;

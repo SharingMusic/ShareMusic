@@ -12,8 +12,13 @@ $('select.dropdown').each(function() {
 
     var list = $('<ul />');     //ul태그를 만든다.
     $(this).find('option').each(function(e) {        //select엘리먼트의 자식들 중에 option엘리먼트를 찾아서 각 엘리먼트들에 대해서
-        list.append($('<li />').append($('<div />').text($(this).text())));
+        var value = $(this).attr('value');      //옵션 태그의 name 
+        var text = $(this).text();          //옵션 태그의 text */
+        var div = $('<div />').attr('value',value).text(text);        //div블럭을 생성하고 name속성값과 text를 셋팅한다.
+
+        list.append($('<li />').append(div));    
     });
+  
     list.find('div').click(function(){      //div에 클릭 리스너를 단다.
          alert($(this).text());           
     });
