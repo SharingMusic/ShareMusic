@@ -27,31 +27,43 @@
 
 <body>
 
-    <header>        <!-- Nav + Title Bar -->
+    <header>
         <div class="title-bar">
             <div class="title">
                 <a href="#">ShareMusic</a>
             </div>
-            <form action="#" >
-                <div class="search-wrapper">
-                    <div class="input-holder">
-                        <input type="text" class="search-input" placeholder="Type to search" />
-                        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+
+            <!-- 검색 -->
+            <form action="#" class="search-wrapper">        
+                <div class="search-dropdown hide">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                     z
+                    </button>
+                    <!-- 검색 드롭다운 메뉴: id넣어야함 -->
+                    <div class="dropdown-menu">
+                      <div class="dropdown-item">Link 1</div>
+                      <div class="dropdown-item">Link 2</div>
+                      <div class="dropdown-item">Link 3</div>
                     </div>
-                    <span class="close" onclick="searchToggle(this, event);"></span>
                 </div>
-    
-    
+                <div class="input-holder">
+
+                    <input type="text" class="search-input" placeholder="Type to search"/>
+                    <button type="submit" class="search-icon"
+                        onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
             </form>
- 
+
+            <!-- 사용자 드롭다운 버튼 -->
             <div class="user">
-                    
-                    <select class="dropdown" placeholder="alsrhs530">
-                        <option value="#" name="addColection">Link1</option>
-                        <option value="#" name="myPage">Link2</option>
-                        <option value="#" name="link3">Link3</option>
-                        <option value="#" name="link4">Link4</option>
-                     </select>
+
+                <select class="dropdown">
+                    <option value="#" name="addColection">Link1</option>
+                    <option value="#" name="myPage">Link2</option>
+                    <option value="#" name="link3">Link3</option>
+                    <option value="#" name="link4">Link4</option>
+                </select>
             </div>
         </div>
 
@@ -71,34 +83,55 @@
         </nav>
     </header>
     <section>
-      
+
+
+
         <div class="main">
-                <div class="horizontal-scroll-block">
-        
-                    <div class="horizontal-scroll">
-                        <div class="img-wrapper">
-                            <i class="fas fa-sad-tear"></i>
-                        </div>
-                        <div class="img-wrapper">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <div class="img-wrapper">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <div class="img-wrapper">
-                            <i class="far fa-laugh-wink"></i>
-                        </div>
-                        <div class="img-wrapper">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <div class="img-wrapper">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
+            <div class="horizontal-scroll-block">
+                <div class="horizontal-scroll">
+                    <!-- 각 img-wrapper 클래스에 클릭리스너를 달면 된다. 동적으로 img-wrapper를 생성하면 될 듯-->
+                    <div class="img-wrapper">
+                        <i class="fas fa-sad-tear"></i>
                     </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="far fa-laugh-wink"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-sad-tear"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="far fa-laugh-wink"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="img-wrapper">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+
                 </div>
-        
-                
             </div>
+
+
+        </div>
     </section>
 
 
