@@ -27,7 +27,7 @@
     <link rel="stylesheet" href=".\css\init.css" />
     <link rel="stylesheet" href=".\css\menu.css" />
     <link rel="stylesheet" href=".\css\title-bar.css" />
-    <link rel="stylesheet" href=".\css\profile.css" />
+    <link rel="stylesheet" href=".\css\collection.css" />
   </head>
   <style></style>
 
@@ -81,63 +81,120 @@
     </header>
     <section>
       <div class="main">
-        <div class="container">
-          <div class="profile">
-            <div class="col-md-7">
-              <img
-                src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image.png" class="profile-image" alt="image" />
+        <div class="container profile">
+          <!-- 컬렉션 정보 -->
+          <div class="col-md-4">
+            <img
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+              class="collection-image"
+              alt="image"
+            />
+            <div style="margin-bottom: 50px;">
+              <h1>hyongsoo</h1>
             </div>
 
-            <div class="col-md-5" style="margin-top: 35px;">
-              <div style="margin-bottom: 50px;"><h1>hyongsoo</h1></div>
-              <div class="row">
-                <div class="col-md-4">
-                  <p><strong> 컬렉션 </strong></p>
-                  <div>55</div>
-                </div>
-                <div class="col-md-4">
-                  <p><strong> 팔로우 </strong></p>
-                  <div>78</div>
-                </div>
-                <div class="col-md-4">
-                  <p><strong> 팔로워 </strong></p>
-                  <div>50</div>
-                </div>
+            <div class="row">
+              <div class="col-md-4">
+                <p><strong> 컬렉션 </strong></p>
+                <div>55</div>
               </div>
 
-              <div class="row" style="margin-top: 10px;">
-                <div class="col-md-6">
-                  <button type="button" class="btn btn-primary">팔로우</button></div>
-                <div class="col-md-6">
-                  <button type="button" class="btn btn-primary">메시지</button></div>
+              <div class="col-md-4">
+                <p><strong> 팔로우 </strong></p>
+                <div>78</div>
               </div>
 
+              <div class="col-md-4">
+                <p><strong> 팔로워 </strong></p>
+                <div>50</div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        
-        <div class="horizontal-scroll-block">
-          <div class="horizontal-scroll">
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image6.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image7.png" alt="image"></img>
+            <div class="row" style="margin-top: 10px;">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-primary">
+                  팔로우
+                </button>
+              </div>
+
+              <div class="col-md-6">
+                <button type="button" class="btn btn-primary">
+                  메시지
+                </button>
+              </div>
             </div>
           </div>
+
+          <!-- 곡 리스트  -->
+          <div class="col-md-4" id="div_menu">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>곡명</th>
+                  <th>가수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>마에스트로</td>
+                  <td>창모</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>불타오르네</td>
+                  <td>방탄소년단</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>그대라는 사치</td>
+                  <td>한동근</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>갖고놀래</td>
+                  <td>범키</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>품</td>
+                  <td>볼빨간사춘기</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Moon Blue</td>
+                  <td>Gray</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>몇번째(Feat. 백현)</td>
+                  <td>KozyPop</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>비</td>
+                  <td>폴킴</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>있잖아</td>
+                  <td>폴킴</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Not over yet</td>
+                  <td>폴킴</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-4">
+            <h2>Hello</h2>
+          </div>
+
+          <!-- container -->
         </div>
       </div>
     </section>
