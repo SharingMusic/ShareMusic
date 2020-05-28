@@ -37,7 +37,7 @@ public class CollectionSongController {
 		List<SongVO> songs = songService.getCollectionSongs(cno);
 		return new ResponseEntity<>(songs, HttpStatus.OK);
 	}
-	
+
 	// 곡 정보 조회
 	@GetMapping("/{sno}")
 	public ResponseEntity<SongVO> getCollectionSong(@PathVariable("sno") int sno) {
@@ -49,16 +49,14 @@ public class CollectionSongController {
 	@PutMapping("/")
 	public ResponseEntity<String> updateCollectionSong(@RequestBody SongVO song) {
 
-		return songService.updateCollectionSong(song) == 1 ?
-				new ResponseEntity<String>("success", HttpStatus.OK)
+		return songService.updateCollectionSong(song) == 1 ? new ResponseEntity<String>("success", HttpStatus.OK)
 				: new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	// 해당 곡 삭제
 	@DeleteMapping(value = "/{sno}")
 	public ResponseEntity<String> deleteCollectionSong(@PathVariable("sno") int sno) {
-		return songService.deleteCollectionSong(sno) != 0 ?
-				new ResponseEntity<String>("success", HttpStatus.OK)
+		return songService.deleteCollectionSong(sno) != 0 ? new ResponseEntity<String>("success", HttpStatus.OK)
 				: new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
