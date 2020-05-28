@@ -380,6 +380,7 @@
   z-index: 4;
   left: 10px;
   transform: translate(0, 5px);
+
   transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57);
   transition-delay: 0.3s;
 }

@@ -134,17 +134,15 @@ div {
 
 div.profile {
   position: relative;
-  left: 0%;
   margin-top: 100px;
   display: flex;
   flex-direction: row;
   height: 60%;
-  align-items: center;
-  /* justify-content: center; */
+  /* align-items: space-around; */
+  /* justify-content: space-around; */
 
   border: 1px black;
   text-align: center;
-  box-sizing: border-box;
   width: 80%;
   /* height: 60%; */
   /* padding: 5px; */
