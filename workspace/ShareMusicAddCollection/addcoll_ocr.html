@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title></title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/addcoll_ocr.css" rel="stylesheet" type="text/css" />
+        <link href="fontAwesome/css/all.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@568;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    
+        <script lang="JavaScrpit" src="js/addcoll1.js" type="text/javascrpit"></script>
+        
+    </head>
+    
+    
+    
+    
+    <body>
+    
+        <div id="div_root">
+            <!--타이틀-->
+            <div id="div_top">
+                <h1 class="titlename">Add Collection</h1>
+    
+            </div>
+            <div class="move-area">
+    
+    
+                <!--end-->
+    
+                <div class="next">
+                    <button type="submit" class="btn btn-link" style="height: 100%;">
+                        <i class="fas fa-caret-left" style="font-size: 3em;"></i>
+                      </button>
+                </div>
+        
+                  <!--컬렉션 리스트 업로드-->
+                  <div id="div_menu">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th><th>곡명</th><th>가수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>11</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>12</td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>13</td><td></td><td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                </div>
+        
+                <!--컬렉션 리스트 추가하는 곳-->
+                <div id="div_con">
+        
+                    <!--직접 입력-->
+                    <div class="input-direct">
+                        <!--input text: 곡/가수 명-->
+                        <div style="display: inline-block;">
+                            <div class="input-in" style="padding: .75em;">
+                                <span style="font-size: 0.9em; color: #5CD1E5">곡명</span>
+                                <input type="text" class="form-control " placeholder="곡 이름">
+                            </div>
+                            <div class="input-in" style="padding: .75em;">
+                                <span style="font-size: 0.9em;  color: #5CD1E5">가수명</span>
+                                <input type="text" class="form-control" placeholder="가수 이름">
+                            </div>
+                        </div>
+                        <div style="display: inline-block; ">
+        
+                            <!--button: 컬렉션 추가 함수 등록-->
+                            <button type="button" class="btn btn-light listup">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <!--OCR-->
+                    <div id="image-up">
+                        <div id="View_area">
+                        </div>
+        
+                        <div class="filebox bs3-primary preview-image button-plus">
+                            <label for="input_file">
+                                <i class="far fa-images"></i>
+                            </label> 
+        
+                            <!--미리보기 함수(priviewImage) 등록-->
+                            <input type="file" onchange="previewImage(this,'View_area')" id="input_file" class="upload-hidden"> 
+                        </div>
+                        <div class="button-plus"> 
+                            <!--button: OCR 버튼-->
+                            <button type="button" class="btn btn-light" id="listup">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+    
+            </div>
+    
+    
+    
+        </div><!--root-->
+    
+    </body>
+
+</html>
