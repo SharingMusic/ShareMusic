@@ -28,6 +28,7 @@
     <link rel="stylesheet" href=".\css\menu.css" />
     <link rel="stylesheet" href=".\css\title-bar.css" />
     <link rel="stylesheet" href=".\css\collection.css" />
+    <link rel="stylesheet" href=".\css\modal.css" />
   </head>
   <style></style>
 
@@ -81,129 +82,534 @@
     </header>
     <section>
       <div class="main">
-        <div class="container profile">
-          <!-- 컬렉션 정보 -->
-          <div class="col-md-4">
-            <img
-              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
-              class="collection-image"
-              alt="image"
-            />
-            <div style="margin-bottom: 50px;">
-              <h1>hyongsoo</h1>
+        <div class="container-fluid" id="top">
+          <div class="profile">
+            <div id="image-box">
+              <img
+                src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                class="collection-image"
+                alt="image"
+              />
             </div>
 
-            <div class="row">
-              <div class="col-md-4">
-                <p><strong> 컬렉션 </strong></p>
-                <div>55</div>
+            <div class="container collection-information">
+              <div class="row">
+                <div id="collection-title" style="font-size: 4vh;">
+                  Chill out
+                </div>
+              </div>
+              <div class="row">
+                <strong>hyongsoo</strong>
+              </div>
+              <div class="row">
+                <strong>32&nbsp;</strong><small> Tracks</small>
+              </div>
+              <div class="row">
+                <strong>20&nbsp;</strong><small>Likes</small>
               </div>
 
-              <div class="col-md-4">
-                <p><strong> 팔로우 </strong></p>
-                <div>78</div>
+              <div class="row">
+                <span id="tag">#sleepy #hello #lonely</span>
               </div>
 
-              <div class="col-md-4">
-                <p><strong> 팔로워 </strong></p>
-                <div>50</div>
-              </div>
-            </div>
+              <div class="row" style="width: 80%; margin-top: 0.5vh;">
+                <div style="display: inline-block;">
+                  <span
+                    >      
+                  <i
+                  class="fas fa-heart fa-lg"
+                  style="color: rgb(237, 73, 86);"
+                ></i>
+                  </span>
+                </div>
 
-            <div class="row" style="margin-top: 10px;">
-              <div class="col-md-6">
-                <button type="button" class="btn btn-primary">
-                  팔로우
-                </button>
-              </div>
-
-              <div class="col-md-6">
-                <button type="button" class="btn btn-primary">
-                  메시지
-                </button>
+                <div style="display: inline-block; margin-left: 2vh;">
+                  <span> 
+                    <i
+                    class="far fa-comment fa-lg"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                  ></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <!-- container -->
 
-          <!-- 곡 리스트  -->
-          <div class="col-md-4" id="div_menu">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>곡명</th>
-                  <th>가수</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>마에스트로</td>
-                  <td>창모</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>불타오르네</td>
-                  <td>방탄소년단</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>그대라는 사치</td>
-                  <td>한동근</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>갖고놀래</td>
-                  <td>범키</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>품</td>
-                  <td>볼빨간사춘기</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Moon Blue</td>
-                  <td>Gray</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>몇번째(Feat. 백현)</td>
-                  <td>KozyPop</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>비</td>
-                  <td>폴킴</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>있잖아</td>
-                  <td>폴킴</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Not over yet</td>
-                  <td>폴킴</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="container-fluid" id="bottom">
+          <div id="track">
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex">
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>1</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>창모</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>아름다워</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>2</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>창모</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>마에스트로</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>3</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>원더걸스</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>Tell me</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>4</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>방탄소년단</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>불타오르네</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>6</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>황인욱</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>취했나봐</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>7</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>창모</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>COUNTIN MY GUAP</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>8</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>GRAY (그레이)</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>Moon Blue</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>9</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>볼빨간 사춘기</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>품</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>10</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>길구봉구</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>은하수</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>11</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>폴킴</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>Not Over Yet</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>12</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>폴킴</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>카톡</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>12</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>폴킴</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>카톡</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>12</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>폴킴</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>카톡</b></h6>
+                </div>
+              </li>
+
+              <li
+                class="list-group-item d-flex align-items-center justify-content-between"
+              >
+                <div class="col-md-2" style="text-align: left;">
+                  <h6 class="my-0"><b>12</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>폴킴</b></h6>
+                </div>
+
+                <div class="col-md-5" style="text-align: left;">
+                  <h6 class="my-0"><b>카톡</b></h6>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <div class="col-md-4">
+          <div id="youtube">
             <iframe
               id="ytplayer"
               type="text/html"
-              width="640"
-              height="360"
-              src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/lOrU0MH0bMk?autoplay=1&origin=http://example.com"
               frameborder="0"
+              -webkit-border-radius:30px;
+              float:right;
             ></iframe>
           </div>
-
-          <!-- container -->
         </div>
+        <!-- container -->
       </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog" style="margin-top: 15vh; width: 600px;">
+                <!-- Modal content-->
+                <div class="modal-content" style="border-radius: 30px;">
+                  <div class="modal-body">
+                    <div class="container-fluid modal-container">
+                      <div class="row reply-item">
+                        <div class="reply-image">
+                          <img
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                            class="collection-image"
+                            alt="image"
+                          />
+                        </div>
+      
+                        <div class="reply-user">
+                          <strong>parkmingon</strong>
+                        </div>
+      
+                        <div id="reply-message">
+                          <span class="msg">
+                            hellokasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                            kasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                            Some text in the modal2
+                          </span>
+                        </div>
+                      </div>
+      
+                      <div class="row reply-item">
+                        <div class="reply-image">
+                          <img
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                            class="collection-image"
+                            alt="image"
+                          />
+                        </div>
+      
+                        <div class="reply-user">
+                          <strong>hyongsoo</strong>
+                        </div>
+      
+                        <div id="reply-message">
+                          <span class="msg">
+                            Some text in the modal3
+                          </span>
+                        </div>
+                      </div>
+      
+                      <div class="row reply-item">
+                        <div class="reply-image">
+                          <img
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                            class="collection-image"
+                            alt="image"
+                          />
+                        </div>
+      
+                        <div class="reply-user">
+                          <strong>yhjun1000</strong>
+                        </div>
+      
+                        <div id="reply-message">
+                          <span class="msg">
+                            Some text in the modal4
+                          </span>
+                        </div>
+                      </div>
+      
+                      <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>parkmingon</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              hellokasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                              kasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                              Some text in the modal2
+                            </span>
+                          </div>
+                        </div>
+        
+                        <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>hyongsoo</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              Some text in the modal3
+                            </span>
+                          </div>
+                        </div>
+        
+                        <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>yhjun1000</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              Some text in the modal4
+                            </span>
+                          </div>
+                        </div>
+      
+                        <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>parkmingon</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              hellokasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasdkasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                              kasdjfkl;ajsdljfklakjs;djfklajsdlfjla;sfjdisplay:kl;asdjfkl;asjdl;fjklasjdkl;fajdkl;fjasd
+                              Some text in the modal2
+                            </span>
+                          </div>
+                        </div>
+        
+                        <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>hyongsoo</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              Some text in the modal3
+                            </span>
+                          </div>
+                        </div>
+        
+                        <div class="row reply-item">
+                          <div class="reply-image">
+                            <img
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                              class="collection-image"
+                              alt="image"
+                            />
+                          </div>
+        
+                          <div class="reply-user">
+                            <strong>yhjun1000</strong>
+                          </div>
+        
+                          <div id="reply-message">
+                            <span class="msg">
+                              Some text in the modal4
+                            </span>
+                          </div>
+                        </div>
+                        <!-- reply-item -->
+                    </div>
+                  </div>
+      
+                  <div class="modal-footer">
+                    <div class="container-fluid modal-container">
+                      <div class="row reply-item">
+                        <div class="reply-image">
+                          <img
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                            class="collection-image"
+                            alt="image"
+                          />
+                        </div>
+      
+                        <div class="reply-user">
+                          <strong>mingon</strong>
+                        </div>
+      
+                        <div id="reply-input">
+                              <div style="width: 75%;" >
+                              <textarea style="overflow: hidden; width: 100%;" class="form-control" rows="1" placeholder="replay..."></textarea>
+                              </div>
+                              <div style="width: 25%;" >
+                              <button id="reply-btn" style="margin-left: 2vh; margin-right: 1vh;" type="button" class="btn btn-light">게시</button>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- 여기까지 row  -->
+                      </div>
+                      <!-- modal-container -->
+                    </div>
+                    <!-- modal-footer -->
+                  </div>
+                  </div>
+              </div>
+            </div>
     </section>
 
     <script
