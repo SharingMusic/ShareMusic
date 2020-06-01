@@ -29,6 +29,7 @@
     translateX(calc(0vh - var(--horizontal-scroll-height)));
   overflow-y: auto;
   overflow-x: hidden;
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
 }
 
 .img-wrapper {
