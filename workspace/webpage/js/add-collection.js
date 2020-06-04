@@ -1,20 +1,23 @@
 var moveArea = $(document).find('.move-area');
 var leftBtn = $(document).find('.left-btn');
 var rightBtn = $(document).find('.right-btn');
-
+var submitBtn = $(document).find('.submit-btn');
 //왼쪽 화살표를 눌렀을 때
 $(document).on('click touch', '.left-btn',function(e){
     e.preventDefault();
-    rightBtn.removeClass('right-btn-hide')
-    leftBtn.addClass('left-btn-hide');
-    moveArea.removeClass('move-right'); 
+    moveArea.removeClass('move-right');    //영역 왼쪽으로 이동
+    submitBtn.addClass('submit-btn-hide') //submit버튼 숨기기
+    leftBtn.addClass('left-btn-hide');  //왼쪽 버튼 숨기기
+    rightBtn.removeClass('right-btn-hide')  //오른쪽버튼 보이기
 });
 //오른쪽 화살표를 눌렀을 때
 $(document).on('click touch', '.right-btn',function(e){
     e.preventDefault();
-    leftBtn.removeClass('left-btn-hide');
-    rightBtn.addClass('right-btn-hide');
-    moveArea.addClass('move-right');
+    moveArea.addClass('move-right');        //영역 오른쪽으로 이동
+    leftBtn.removeClass('left-btn-hide');   //왼쪽버튼 보이기
+    rightBtn.addClass('right-btn-hide');    //오른쪽버튼 숨기기
+    submitBtn.removeClass('submit-btn-hide');   //submit버튼 보이기
+    
 });
 
 $(document).ready(function(){

@@ -25,241 +25,249 @@
 <body>
     <header>
         <div class="title-bar">
-          <div class="title">
-            <a href="#">ShareMusic</a>
-          </div>
-  
-          <!-- 검색 -->
-          <form action="#" class="search-wrapper">
-            <div class="search-dropdown hide">
-              <button
-                type="button"
-                class="btn dropdown-toggle"
-                data-toggle="dropdown"
-              >
-                z
-              </button>
-              <!-- 검색 드롭다운 메뉴: id넣어야함 -->
-              <div class="dropdown-menu">
-                <div class="dropdown-item">Link 1</div>
-                <div class="dropdown-item">Link 2</div>
-                <div class="dropdown-item">Link 3</div>
-              </div>
+            <div class="title">
+                <a href="#">ShareMusic</a>
             </div>
-            <div class="input-holder">
-              <input
-                type="text"
-                class="search-input"
-                placeholder="Type to search"
-              />
-              <button
-                type="submit"
-                class="search-icon"
-                onclick="searchToggle(this, event);"
-              >
-                <span></span>
-              </button>
+
+            <!-- 검색 -->
+            <form action="#" class="search-wrapper">
+                <div class="search-dropdown hide">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                        z
+                    </button>
+                    <!-- 검색 드롭다운 메뉴: id넣어야함 -->
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">Link 1</div>
+                        <div class="dropdown-item">Link 2</div>
+                        <div class="dropdown-item">Link 3</div>
+                    </div>
+                </div>
+                <div class="input-holder">
+                    <input type="text" class="search-input" placeholder="Type to search" />
+                    <button type="submit" class="search-icon" onclick="searchToggle(this, event);">
+                        <span></span>
+                    </button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+            </form>
+
+            <!-- 사용자 드롭다운 버튼 -->
+            <div class="user">
+                <select class="dropdown">
+                    <option value="#" name="addColection">Link1</option>
+                    <option value="#" name="myPage">Link2</option>
+                    <option value="#" name="link3">Link3</option>
+                    <option value="#" name="link4">Link4</option>
+                </select>
             </div>
-            <span class="close" onclick="searchToggle(this, event);"></span>
-          </form>
-  
-          <!-- 사용자 드롭다운 버튼 -->
-          <div class="user">
-            <select class="dropdown">
-              <option value="#" name="addColection">Link1</option>
-              <option value="#" name="myPage">Link2</option>
-              <option value="#" name="link3">Link3</option>
-              <option value="#" name="link4">Link4</option>
-            </select>
-          </div>
         </div>
-  
+
         <nav>
-          <div class="menu-btn">
-            <div class="line line--1"></div>
-            <div class="line line--2"></div>
-            <div class="line line--3"></div>
-          </div>
-  
-          <div class="nav-links">
-            <a href="#" class="link">Link1</a>
-            <a href="#" class="link">Link2</a>
-            <a href="#" class="link">Link3</a>
-            <a href="#" class="link">Link4</a>
-          </div>
-        </nav>
-      </header>
-    <section>
-    <div class="main">
-        <div class="small-title">
-            Add Collection
-        </div>
-        <div class="move-area">
-            <!-- 컬렉션 이미지와 정보 입력 -->
-            <div class="profile-area">
-                <div id='view'></div>
-                <div id="forms">
-                    <div class="filebox bs3-primary preview-image">
-                        <input id="filename-up" class="upload-name" placeholder="file name" disabled="disabled">
-                        <label for="input_file"><i class="far fa-images"></i></label>
-                        <input type="file" onchange="previewImage(this,'view')" id="input_file" class="upload-hidden">
-                        <input type="text" class="form-control" placeholder="Collceion Name" name="Collect-name">
-                        <input type="text" class="form-control" placeholder="Tag" name="tag-name">
-                    </div>
-                </div>
+            <div class="menu-btn">
+                <div class="line line--1"></div>
+                <div class="line line--2"></div>
+                <div class="line line--3"></div>
             </div>
-            <!-- OCR을 이용한 노래제목 입력 -->
-            <div class="ocr-area">
-                <div class="table-wrapper">
-                    <div class="table-box">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>곡명</th>
-                                    <th>가수</th>
-                                </tr>
-                            </thead>
-                            <tbody>
 
-                                <tr>
-                                    <td>1</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>12</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>13</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
+            <div class="nav-links">
+                <a href="#" class="link">Link1</a>
+                <a href="#" class="link">Link2</a>
+                <a href="#" class="link">Link3</a>
+                <a href="#" class="link">Link4</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="main">
+            <div class="small-title">
+                Add Collection
+            </div>
+            <div class="move-area">
+                <!-- 컬렉션 이미지와 정보 입력 -->
+                <div class="profile-area">
+                    <div id='view'></div>
+                    <div id="forms">
+                        <div class="filebox bs3-primary preview-image">
+                            <input id="filename-up" class="upload-name" placeholder="file name" disabled="disabled">
+                            <label for="input_file"><i class="far fa-images"></i></label>
+                            <input type="file" onchange="previewImage(this,'view')" id="input_file"
+                                class="upload-hidden">
+                            <input type="text" class="form-control" placeholder="Collceion Name" name="Collect-name">
+                            <input type="text" class="form-control" placeholder="Tag" name="tag-name">
+                        </div>
                     </div>
                 </div>
-                <div class="input-wrapper">
+                <!-- OCR을 이용한 노래제목 입력 -->
+                <div class="ocr-area">
+                    <div class="table-wrapper">
+                        <div class="table-box">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>곡명</th>
+                                        <th>가수</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                    <!--직접 입력-->
-                    <div class="input-direct">
-                        <!--input text: 곡/가수 명-->
-                        <div style="display: inline-block;">
-                            <div class="input-in">
-                                <span>곡명</span>
-                                <input type="text" class="form-control " placeholder="곡 이름">
-                            </div>
-                            <div class="input-in">
-                                <span>가수명</span>
-                                <input type="text" class="form-control" placeholder="가수 이름">
-                            </div>
-                        </div>
-                        <div style="display: inline-block; ">
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>허각</td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
 
-                            <!--button: 컬렉션 추가 함수 등록-->
-                            <button type="button" class="btn btn-info">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="fas fa-trash"></i></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
                         </div>
                     </div>
+                    <div class="input-wrapper">
 
-                    <!--OCR-->
-                    <div class="image-up">
-                        <div id="ocr-view"></div>
+                        <!--직접 입력-->
+                        <div class="input-direct">
+                            <!--input text: 곡/가수 명-->
+                            <div style="display: inline-block;">
+                                <div class="input-in">
+                                    <span>곡명</span>
+                                    <input type="text" class="form-control " placeholder="곡 이름">
+                                </div>
+                                <div class="input-in">
+                                    <span>가수명</span>
+                                    <input type="text" class="form-control" placeholder="가수 이름">
+                                </div>
+                            </div>
+                            <div style="display: inline-block; ">
 
-                        <div class="filebox bs3-primary preview-image button-plus">
-                            <label for="input_file2" class="image-btn">
-                                <i class="far fa-images"></i>
-                            </label>
-                           
+                                <!--button: 컬렉션 추가 함수 등록-->
+                                <button type="button" class="btn btn-info">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--OCR-->
+                        <div class="image-up">
+                            <div id="ocr-view"></div>
+
+                            <div class="filebox bs3-primary preview-image button-plus">
+                                <label for="input_file2" class="image-btn">
+                                    <i class="far fa-images"></i>
+                                </label>
+
                                 <!--button: OCR 버튼-->
                                 <button type="button" class="btn btn-info add-btn">
                                     <i class="fas fa-plus"></i>
                                 </button>
-                           
 
-                            <!--미리보기 함수(priviewImage) 등록-->
-                            <input type="file" onchange="previewImage(this,'ocr-view')" id="input_file2"
-                                class="upload-hidden">
+
+                                <!--미리보기 함수(priviewImage) 등록-->
+                                <input type="file" onchange="previewImage(this,'ocr-view')" id="input_file2"
+                                    class="upload-hidden">
+                            </div>
                         </div>
-
-                        
                     </div>
                 </div>
             </div>
+
+
+            <!-- 화살표 버튼 -->
+            <div class="blank-block-left"></div>
+            <div class="left-btn left-btn-hide">
+                <span class="btn btn-link">
+                    <i class="fas fa-caret-left"></i>
+                </span>
+            </div>
+            <div class="right-btn">
+                <span class="btn btn-link">
+                    <i class="fas fa-caret-right"></i>
+                </span>
+            </div>
+            <!-- 전송 버튼  -->
+            <div class="submit-btn submit-btn-hide">
+                <span class="btn btn-link">
+                    <i class="fas fa-angle-double-right" title="컬렉션 생성"></i>
+                </span>
+            </div>
+            <div class="blank-block-right"></div>
+
+
         </div>
-
-
-        <!-- 화살표 버튼 -->
-        <div class="blank-block-left"></div>
-        <div class="left-btn left-btn-hide">
-            <span type="submit" class="btn btn-link">
-                <i class="fas fa-caret-left"></i>
-            </span>
-        </div>
-        <div class="right-btn">
-            <span type="submit" class="btn btn-link">
-                <i class="fas fa-caret-right"></i>
-            </span>
-        </div>
-        <div class="blank-block-right"></div>
-
-
-    </div>
-</section>
+    </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
