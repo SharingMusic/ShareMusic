@@ -1,164 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Main</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+<head>
+  <title>Main</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- FontAwesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <!-- Custom Style CSS -->
-    <link rel="stylesheet" href=".\css\init.css" />
-    <link rel="stylesheet" href=".\css\menu.css" />
-    <link rel="stylesheet" href=".\css\title-bar.css" />
-    <link rel="stylesheet" href=".\css\profile.css" />
-  </head>
-  <style></style>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
-  <body>
-    <header>
-      <!-- Nav + Title Bar -->
-      <div class="title-bar">
-        <div class="title">
-          <a href="#">ShareMusic</a>
-        </div>
-        <form action="#">
-          <div class="search-wrapper">
-            <div class="input-holder">
-              <input
-                type="text"
-                class="search-input"
-                placeholder="Type to search"
-              />
-              <button class="search-icon" onclick="searchToggle(this, event);">
-                <span></span>
-              </button>
-            </div>
-            <span class="close" onclick="searchToggle(this, event);"></span>
+  <!-- Custom Style CSS -->
+  <link rel="stylesheet" href=".\css\init.css" />
+  <link rel="stylesheet" href=".\css\menu.css" />
+  <link rel="stylesheet" href=".\css\title-bar.css" />
+  <link rel="stylesheet" href=".\css\profile.css" />
+</head>
+<style></style>
+
+<body>
+  <header>
+    <!-- Nav + Title Bar -->
+    <div class="title-bar">
+      <div class="title">
+        <a href="#">ShareMusic</a>
+      </div>
+      <form action="#">
+        <div class="search-wrapper">
+          <div class="input-holder">
+            <input type="text" class="search-input" placeholder="Type to search" />
+            <button class="search-icon" onclick="searchToggle(this, event);">
+              <span></span>
+            </button>
           </div>
-        </form>
+          <span class="close" onclick="searchToggle(this, event);"></span>
+        </div>
+      </form>
 
-        <div class="user">
-          <select class="dropdown" placeholder="alsrhs530">
-            <option value="#" name="addColection">Link1</option>
-            <option value="#" name="myPage">Link2</option>
-            <option value="#" name="link3">Link3</option>
-            <option value="#" name="link4">Link4</option>
-          </select>
+      <div class="user">
+        <select class="dropdown" placeholder="alsrhs530">
+          <option value="#" name="addColection">Link1</option>
+          <option value="#" name="myPage">Link2</option>
+          <option value="#" name="link3">Link3</option>
+          <option value="#" name="link4">Link4</option>
+        </select>
+      </div>
+    </div>
+
+    <nav>
+      <div class="menu-btn">
+        <div class="line line--1"></div>
+        <div class="line line--2"></div>
+        <div class="line line--3"></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#" class="link">Link1</a>
+        <a href="#" class="link">Link2</a>
+        <a href="#" class="link">Link3</a>
+        <a href="#" class="link">Link4</a>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="main">
+      <div class="container">
+        <div class="profile">
+          <div class="col-md-7">
+            <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image.png"
+              class="profile-image" alt="image" />
+          </div>
+
+          <div class="col-md-5" style="margin-left: 35px;">
+            <div id="collector-name">
+              <h1>hyongsoo</h1>
+            </div>
+            <div class="user-info">
+              <div>
+                <strong> 컬렉션 </strong>
+                <div>55</div>
+              </div>
+              <div>
+                <strong> 팔로우 </strong>
+                <div>78</div>
+              </div>
+              <div>
+                <strong> 팔로워 </strong>
+                <div>50</div>
+              </div>
+            </div>
+
+            <div class="user-info" style="margin-top: 10px;">
+              <div>
+                <button type="button" class="btn btn-primary">팔로우</button></div>
+              <div>
+                <button type="button" class="btn btn-primary">메시지</button></div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      <nav>
-        <div class="menu-btn">
-          <div class="line line--1"></div>
-          <div class="line line--2"></div>
-          <div class="line line--3"></div>
-        </div>
 
-        <div class="nav-links">
-          <a href="#" class="link">Link1</a>
-          <a href="#" class="link">Link2</a>
-          <a href="#" class="link">Link3</a>
-          <a href="#" class="link">Link4</a>
-        </div>
-      </nav>
-    </header>
-    <section>
-      <div class="main">
-        <div class="container">
-          <div class="profile">
-            <div class="col-md-7">
-              <img
-                src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image.png" class="profile-image" alt="image" />
-            </div>
+      <div class="horizontal-scroll-block">
+        <div class="horizontal-scroll">
 
-            <div class="col-md-5 collection-information" style="margin-left: 35px;">
-              <div style="margin-bottom: 50px;"><h1>hyongsoo</h1></div>
-              <div class="row">
-                <div class="col-md-4">
-                  <p><strong> 컬렉션 </strong></p>
-                  <div>55</div>
-                </div>
-                <div class="col-md-4">
-                  <p><strong> 팔로우 </strong></p>
-                  <div>78</div>
-                </div>
-                <div class="col-md-4">
-                  <p><strong> 팔로워 </strong></p>
-                  <div>50</div>
-                </div>
+          <div class="img-wrapper">
+            <img style="display:inline-block;" class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+              alt="image"></img>
+            <!-- 정보 시작 -->
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
               </div>
-
-              <div class="row" style="margin-top: 10px;">
-                <div class="col-md-6">
-                  <button type="button" class="btn btn-primary">팔로우</button></div>
-                <div class="col-md-6">
-                  <button type="button" class="btn btn-primary">메시지</button></div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
               </div>
-
             </div>
           </div>
-        </div>
 
-        
-        <div class="horizontal-scroll-block">
-          <div class="horizontal-scroll">
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image6.png" alt="image"></img>
-            </div>
-            <div class="img-wrapper">
-              <img class="collection-image" src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image7.png" alt="image"></img>
+
+          <div class="img-wrapper">
+            <img class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+              alt="image"></img>
+            <!-- 정보 시작 -->
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
+              </div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
+              </div>
             </div>
           </div>
+
+          <div class="img-wrapper">
+            <img class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+              alt="image"></img>
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
+              </div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="img-wrapper">
+            <img class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png"
+              alt="image"></img>
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
+              </div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="img-wrapper">
+            <img class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image6.png"
+              alt="image"></img>
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
+              </div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="img-wrapper">
+            <img class="collection-image"
+              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image7.png"
+              alt="image"></img>
+            <div class="collection-info">
+              <div class="collection-name">
+                Collection Name
+              </div>
+              <div class="collection-info-fade">
+                <div><strong>32&nbsp;</strong><small>Tracks</small></div>
+                <div><strong>20&nbsp;</strong><small>Likes</small></div>
+                <div><span id="tag">#sleepy #hello #lonely</span></div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/user-dropdown-btn.js"></script>
-    <script src="./js/search.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/user-dropdown-btn.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/profile.js"></script>
+</body>
+
 </html>

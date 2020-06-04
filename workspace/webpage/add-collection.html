@@ -218,25 +218,25 @@
 
                     <!--OCR-->
                     <div class="image-up">
-                        <div id="ocr-view">
-                            <div class="filebox bs3-primary preview-image button-plus">
-                                <label for="input_file2" class="image-btn">
-                                    <i class="far fa-images"></i>
-                                </label>
+                        <div id="ocr-view"></div>
 
-                                <!--미리보기 함수(priviewImage) 등록-->
-                                <input type="file" onchange="previewImage(this,'ocr-view')" id="input_file2"
-                                    class="upload-hidden">
-                            </div>
+                        <div class="filebox bs3-primary preview-image button-plus">
+                            <label for="input_file2" class="image-btn">
+                                <i class="far fa-images"></i>
+                            </label>
+                           
+                                <!--button: OCR 버튼-->
+                                <button type="button" class="btn btn-info add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                           
+
+                            <!--미리보기 함수(priviewImage) 등록-->
+                            <input type="file" onchange="previewImage(this,'ocr-view')" id="input_file2"
+                                class="upload-hidden">
                         </div>
 
-
-                        <div class="add-btn">
-                            <!--button: OCR 버튼-->
-                            <button type="button" class="btn btn-info">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

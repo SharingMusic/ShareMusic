@@ -26,6 +26,7 @@ body {
   ); */
   height: 100vh;
   width: 100vw;
+  overflow-Y:hidden;
 }
 div {
   margin: 0;
