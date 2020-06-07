@@ -12,3 +12,4 @@ imgWrapper.hover(function(e){
     $(this).find('.collection-info-fade').fadeOut(700);
     $(this).find('.collection-info div:first').removeClass('collection-name-hover').addClass('collection-name');
 });
+
