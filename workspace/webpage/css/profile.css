@@ -87,19 +87,25 @@ img.collection-image {
   box-shadow: 5px 5px 5px rgba(0,0,0,.219);
 
 }
-#collector-name{
+
+.collector-name{
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219);
   transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  vertical-align: center;
+  display: flex;
 }
 .user-info{
   display:flex;
   justify-content: space-between;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219);
+  margin-top: 20px;
 }
-.user-info button{
-  box-shadow: 5px 5px 5px rgba(0,0,0,.219);
+
+.user-info strong {
+  font-size: 18px;
 }
+
 .collection-info{
   text-align: center;
 }
