@@ -29,6 +29,7 @@
     <link rel="stylesheet" href=".\css\title-bar.css" />
     <link rel="stylesheet" href=".\css\collection.css" />
     <link rel="stylesheet" href=".\css\modal.css" />
+    <link rel="stylesheet" href=".\css\like-modal.css" />
   </head>
   <style></style>
 
@@ -104,7 +105,7 @@
               <div class="row">
                 <strong>32&nbsp;</strong><small> Tracks</small>
               </div>
-              <div class="row">
+              <div class="row" data-toggle="modal" data-target="#like-modal">
                 <strong>20&nbsp;</strong><small>Likes</small>
               </div>
 
@@ -609,7 +610,207 @@
                   </div>
                   </div>
               </div>
+
+
+        <!-- Like-Modal -->
+        <div class="modal fade" id="like-modal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" style="border-radius: 30px;">
+              <div class="modal-header" style="height: 11%; margin-bottom: 0px; margin-top: 0px;">
+                  <div style="width: 25%;">
+                    
+                  </div>
+                  <div style="width:50%; text-align:center;">
+                    <div class="modal-title">
+                      <strong style="font-size: 17px;">좋아요</strong>
+                    </div>
+                  </div>
+                  <div style="width: 25%; text-align: right; vertical-align: center;">
+                    <i class="fas fa-times fa-lg" data-toggle="modal" data-target="#like-modal" ></i>
+                  </div>
+                  
+                </div>
+                <!-- modal-header --> 
+
+                <div class="modal-body">
+                  <div class="container-fluid modal-container">
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>parkmingon</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>youngho</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>hyongsoo</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>yeeun</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image6.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>aliceKim</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image7.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>BobMally</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>CharileChoi</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>SamKim</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>TrudyPark</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>sallyMins</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>TimLee</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+              
+                  <!-- reply-item -->
+                </div>
+              </div>
+
+              <!-- modal-body -->
             </div>
+          </div>
+        </div>
+        <!-- Like-Modal -->
+
+      </div>
     </section>
 
     <script
