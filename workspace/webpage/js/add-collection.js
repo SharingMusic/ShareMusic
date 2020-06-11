@@ -1,9 +1,9 @@
-var moveArea = $(document).find('.move-area');
-var leftBtn = $(document).find('.left-btn');
-var rightBtn = $(document).find('.right-btn');
-var submitBtn = $(document).find('.submit-btn');
+var moveArea = jQuery(document).find('.move-area');
+var leftBtn = jQuery(document).find('.left-btn');
+var rightBtn = jQuery(document).find('.right-btn');
+var submitBtn = jQuery(document).find('.submit-btn');
 //왼쪽 화살표를 눌렀을 때
-$(document).on('click touch', '.left-btn',function(e){
+jQuery(document).on('click touch', '.left-btn',function(e){
     e.preventDefault();
     moveArea.removeClass('move-right');    //영역 왼쪽으로 이동
     submitBtn.addClass('submit-btn-hide') //submit버튼 숨기기
@@ -11,7 +11,7 @@ $(document).on('click touch', '.left-btn',function(e){
     rightBtn.removeClass('right-btn-hide')  //오른쪽버튼 보이기
 });
 //오른쪽 화살표를 눌렀을 때
-$(document).on('click touch', '.right-btn',function(e){
+jQuery(document).on('click touch', '.right-btn',function(e){
     e.preventDefault();
     moveArea.addClass('move-right');        //영역 오른쪽으로 이동
     leftBtn.removeClass('left-btn-hide');   //왼쪽버튼 보이기
@@ -20,36 +20,36 @@ $(document).on('click touch', '.right-btn',function(e){
     
 });
 
-$(document).ready(function(){
-    var fileTarget = $('.filebox .upload-hidden');
+jQuery(document).ready(function(){
+    var fileTarget = jQuery('.filebox .upload-hidden');
   
   
   
      fileTarget.on('change', function(){
          if(window.FileReader){
              // 파일명 추출
-             var filename = $(this)[0].files[0].name;
+             var filename = jQuery(this)[0].files[0].name;
   
          } 
   
          else {
              // Old IE 파일명 추출
-             var filename = $(this).val().split('/').pop().split('\\').pop();
+             var filename = jQuery(this).val().split('/').pop().split('\\').pop();
          };
   
-         $(this).siblings('.upload-name').val(filename);
+         jQuery(this).siblings('.upload-name').val(filename);
      });
   
      //preview image 
-     /* var imgTarget = $('.preview-image .upload-hidden');
+     /* var imgTarget = jQuery('.preview-image .upload-hidden');
   
      imgTarget.on('change', function(){
-         var parent = $(this).parent();
+         var parent = jQuery(this).parent();
          parent.children('.upload-display').remove();
   
          if(window.FileReader){
              //image 파일만
-             if (!$(this)[0].files[0].type.match(/image\//)) return;
+             if (!jQuery(this)[0].files[0].type.match(/image\//)) return;
   
   
              
@@ -58,16 +58,16 @@ $(document).ready(function(){
                  var src = e.target.result;
                  parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>');
              }
-             reader.readAsDataURL($(this)[0].files[0]);
+             reader.readAsDataURL(jQuery(this)[0].files[0]);
          }
   
          else {
-             $(this)[0].select();
-             $(this)[0].blur();
+             jQuery(this)[0].select();
+             jQuery(this)[0].blur();
              var imgSrc = document.selection.createRange().text;
              parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>');
   
-             var img = $(this).siblings('.upload-display').find('img');
+             var img = jQuery(this).siblings('.upload-display').find('img');
              img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
          }
      }); */
@@ -147,16 +147,16 @@ $(document).ready(function(){
   /*
   //이미지 미리보기
   
-  $.fn.setPreview = function(opt){ 
+  jQuery.fn.setPreview = function(opt){ 
     "use strict" 
     var defaultOpt = { 
-      inputFile: $(this), 
+      inputFile: jQuery(this), 
       img: null, 
       w: 200,
       h: 200 
     }; 
     
-    $.extend(defaultOpt, opt); 
+    jQuery.extend(defaultOpt, opt); 
     
     var previewImage = function(){ 
       if (!defaultOpt.inputFile || !defaultOpt.img) return; 
@@ -194,19 +194,19 @@ $(document).ready(function(){
     
     }; 
     
-    $(this).change(function(){ 
+    jQuery(this).change(function(){ 
       previewImage();
      }); 
     
     }; 
     
-    $(document).ready(function(){
+    jQuery(document).ready(function(){
        var opt = { 
-         img: $('#img_preview'), 
+         img: jQuery('#img_preview'), 
          w: 200, h: 200 
      };
          
-    $('#input_file').setPreview(opt); 
+    jQuery('#input_file').setPreview(opt); 
         
   });
   */

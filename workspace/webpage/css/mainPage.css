@@ -45,3 +45,8 @@
 	align-items: flex-end;
   -webkit-box-pack: center;
 }
+.img-wrapper i{
+  cursor:pointer;
+  /* border-radius:100px;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.4); */
+}

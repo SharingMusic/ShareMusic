@@ -10,6 +10,9 @@ nav {
   transition: all 800ms cubic-bezier(0.8, 0, 0.33, 1);
   border-radius: 0% 0% 100% 50%;
 }
+nav.nav-open{
+  box-shadow: 0 30px 80px 0 rgba(97, 45, 45, 0.25);
+}
 nav .menu-btn {
   position: absolute;
   top: 6%;
