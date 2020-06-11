@@ -38,7 +38,7 @@ img.collection-image {
 
 div.collection-information {
   /* margin-top: 30px; */
-  width: 30vh;
+  width: 50vh;
   height: 14vh;
   text-align: left;
   font-size: 1.6vh;
@@ -77,8 +77,14 @@ div.collection-information {
 }
 
 #track ul li {
-  background-color: #33476a;
-  color: linen;
+  background-color: #373D51;
+  color: #f1dfdd;
+  opacity: 1.0;
+}
+
+#track ul li:hover {
+  opacity: 0.6;
+  -webkit-transition-delay: 0s;
 }
 
 #youtube {
@@ -90,4 +96,8 @@ div.collection-information {
 
 #lists {
   background-color: midnightblue;
+}
+
+.singer {
+  display: flex;
 }

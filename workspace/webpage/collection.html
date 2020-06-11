@@ -29,8 +29,10 @@
     <link rel="stylesheet" href=".\css\title-bar.css" />
     <link rel="stylesheet" href=".\css\collection.css" />
     <link rel="stylesheet" href=".\css\modal.css" />
+    <link rel="stylesheet" href=".\css\like-modal.css" />
   </head>
   <style></style>
+
 
   <body>
     <header>
@@ -86,7 +88,7 @@
           <div class="profile">
             <div id="image-box">
               <img
-                src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/75-adminColl8.png"
                 class="collection-image"
                 alt="image"
               />
@@ -95,7 +97,7 @@
             <div class="container collection-information">
               <div class="row">
                 <div id="collection-title" style="font-size: 4vh;">
-                  Chill out
+                  Chill outfadsdfasdfasdf
                 </div>
               </div>
               <div class="row">
@@ -104,7 +106,7 @@
               <div class="row">
                 <strong>32&nbsp;</strong><small> Tracks</small>
               </div>
-              <div class="row">
+              <div class="row" data-toggle="modal" data-target="#like-modal">
                 <strong>20&nbsp;</strong><small>Likes</small>
               </div>
 
@@ -128,7 +130,7 @@
                     <i
                     class="far fa-comment fa-lg"
                     data-toggle="modal"
-                    data-target="#myModal"
+                    data-target="#reply-modal"
                   ></i>
                   </span>
                 </div>
@@ -146,7 +148,7 @@
                   <h6 class="my-0"><b>1</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>창모</b></h6>
                 </div>
 
@@ -162,8 +164,8 @@
                   <h6 class="my-0"><b>2</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
-                  <h6 class="my-0"><b>창모</b></h6>
+                <div class=" col-md-5" style="text-align: left;">
+                  <h6 class="singer my-0"><b>창모</b></h6>
                 </div>
 
                 <div class="col-md-5" style="text-align: left;">
@@ -178,8 +180,10 @@
                   <h6 class="my-0"><b>3</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
-                  <h6 class="my-0"><b>원더걸스</b></h6>
+                <div class="singer col-md-5" style="text-align: left;">
+                  <h6 class="my-0">
+                    <b>원더걸스</b>
+                  </h6>
                 </div>
 
                 <div class="col-md-5" style="text-align: left;">
@@ -194,7 +198,7 @@
                   <h6 class="my-0"><b>4</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>방탄소년단</b></h6>
                 </div>
 
@@ -210,7 +214,7 @@
                   <h6 class="my-0"><b>6</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>황인욱</b></h6>
                 </div>
 
@@ -226,7 +230,7 @@
                   <h6 class="my-0"><b>7</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>창모</b></h6>
                 </div>
 
@@ -242,7 +246,7 @@
                   <h6 class="my-0"><b>8</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>GRAY (그레이)</b></h6>
                 </div>
 
@@ -258,7 +262,7 @@
                   <h6 class="my-0"><b>9</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>볼빨간 사춘기</b></h6>
                 </div>
 
@@ -274,7 +278,7 @@
                   <h6 class="my-0"><b>10</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>길구봉구</b></h6>
                 </div>
 
@@ -290,7 +294,7 @@
                   <h6 class="my-0"><b>11</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>폴킴</b></h6>
                 </div>
 
@@ -306,7 +310,7 @@
                   <h6 class="my-0"><b>12</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>폴킴</b></h6>
                 </div>
 
@@ -319,10 +323,10 @@
                 class="list-group-item d-flex align-items-center justify-content-between"
               >
                 <div class="col-md-2" style="text-align: left;">
-                  <h6 class="my-0"><b>12</b></h6>
+                  <h6 class="my-0"><b>13</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>폴킴</b></h6>
                 </div>
 
@@ -335,10 +339,10 @@
                 class="list-group-item d-flex align-items-center justify-content-between"
               >
                 <div class="col-md-2" style="text-align: left;">
-                  <h6 class="my-0"><b>12</b></h6>
+                  <h6 class="my-0"><b>14</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>폴킴</b></h6>
                 </div>
 
@@ -351,10 +355,10 @@
                 class="list-group-item d-flex align-items-center justify-content-between"
               >
                 <div class="col-md-2" style="text-align: left;">
-                  <h6 class="my-0"><b>12</b></h6>
+                  <h6 class="my-0"><b>15</b></h6>
                 </div>
 
-                <div class="col-md-5" style="text-align: left;">
+                <div class="singer col-md-5" style="text-align: left;">
                   <h6 class="my-0"><b>폴킴</b></h6>
                 </div>
 
@@ -372,6 +376,7 @@
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/lOrU0MH0bMk?autoplay=1&origin=http://example.com"
+              allow='autoplay'
               frameborder="0"
               -webkit-border-radius:30px;
               float:right;
@@ -382,7 +387,7 @@
       </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade" id="reply-modal" role="dialog">
               <div class="modal-dialog" style="margin-top: 15vh; width: 600px;">
                 <!-- Modal content-->
                 <div class="modal-content" style="border-radius: 30px;">
@@ -391,14 +396,17 @@
                       <div class="row reply-item">
                         <div class="reply-image">
                           <img
-                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/75-adminColl8.png"
                             class="collection-image"
                             alt="image"
                           />
                         </div>
       
                         <div class="reply-user">
-                          <strong>parkmingon</strong>
+                          <div><strong>parkmingon</strong></div>
+                          <div class="reply-date">
+                            <small>2020-06-08 13:30</small>
+                          </div>
                         </div>
       
                         <div id="reply-message">
@@ -413,7 +421,7 @@
                       <div class="row reply-item">
                         <div class="reply-image">
                           <img
-                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/108-Test.png"
                             class="collection-image"
                             alt="image"
                           />
@@ -433,7 +441,7 @@
                       <div class="row reply-item">
                         <div class="reply-image">
                           <img
-                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/50-adminColl1.png"
                             class="collection-image"
                             alt="image"
                           />
@@ -453,7 +461,7 @@
                       <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/51-adminColl2.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -475,7 +483,7 @@
                         <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/57-adminColl3.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -495,7 +503,7 @@
                         <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/58-adminColl4.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -515,7 +523,7 @@
                         <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/60-adminColl5.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -537,7 +545,7 @@
                         <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/61-adminColl6.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -557,7 +565,7 @@
                         <div class="row reply-item">
                           <div class="reply-image">
                             <img
-                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                              src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/75-adminColl8.png"
                               class="collection-image"
                               alt="image"
                             />
@@ -582,13 +590,13 @@
                       <div class="row reply-item">
                         <div class="reply-image">
                           <img
-                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                            src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/75-adminColl8.png"
                             class="collection-image"
                             alt="image"
                           />
                         </div>
       
-                        <div class="reply-user">
+                        <div class="reply-user" style="margin-top: 20px;">
                           <strong>mingon</strong>
                         </div>
       
@@ -596,7 +604,7 @@
                               <div style="width: 75%;" >
                               <textarea style="overflow: hidden; width: 100%;" class="form-control" rows="1" placeholder="replay..."></textarea>
                               </div>
-                              <div style="width: 25%;" >
+                              <div style="width: 30%;" >
                               <button id="reply-btn" style="margin-left: 2vh; margin-right: 1vh;" type="button" class="btn btn-light">게시</button>
                             </div>
                         </div>
@@ -609,7 +617,207 @@
                   </div>
                   </div>
               </div>
+
+
+        <!-- Like-Modal -->
+        <div class="modal fade" id="like-modal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" style="border-radius: 30px;">
+              <div class="modal-header" style="height: 11%; margin-bottom: 0px; margin-top: 0px;">
+                  <div style="width: 25%;">
+                    
+                  </div>
+                  <div style="width:50%; text-align:center;">
+                    <div class="modal-title">
+                      <strong style="font-size: 17px;">좋아요</strong>
+                    </div>
+                  </div>
+                  <div style="width: 25%; text-align: right; vertical-align: center;">
+                    <i class="fas fa-times fa-lg" data-toggle="modal" data-target="#like-modal" ></i>
+                  </div>
+                  
+                </div>
+                <!-- modal-header --> 
+
+                <div class="modal-body">
+                  <div class="container-fluid modal-container">
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>parkmingon</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>youngho</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>hyongsoo</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>yeeun</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image6.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>aliceKim</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image7.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>BobMally</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>CharileChoi</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image2.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>SamKim</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image3.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>TrudyPark</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image4.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>sallyMins</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+
+                    <div class="row reply-item">
+                      <div class="user-image-area">
+                        <img src="https://sharemusic-bucket.s3.ap-northeast-2.amazonaws.com/admin/collection-image5.png"
+                          class="user-image" alt="image" />
+                      </div>
+
+                      <div class="user-id-area">
+                        <strong>TimLee</strong>
+                      </div>
+
+                      <div class="follow-button-area">
+                        <button type="button" class="btn btn-primary btn-sm">팔로우</button>
+                      </div>  
+                    </div>
+              
+                  <!-- reply-item -->
+                </div>
+              </div>
+
+              <!-- modal-body -->
             </div>
+          </div>
+        </div>
+        <!-- Like-Modal -->
+
+      </div>
     </section>
 
     <script
@@ -617,6 +825,45 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+
+      var currentIndex = 0;
+
+      // 첫 번째 노래 표시
+      $(document).ready(function(){
+                   var currentList = $("#track ul li").get(currentIndex);
+                   $(currentList).css("background-color","#2b2f3b");
+
+                   var target = $(".singer").get(currentIndex);
+                   $(target).prepend($("<span id='mark' style='color: mediumspringgreen; margin-right: 10px; font-size:13px'>▶</span>"));
+        
+
+      });
+
+      $("#track ul li").click( function() { 
+                   // 현재 재생 중인 곡의 색 복원
+                   var currentList = $("#track ul li").get(currentIndex);
+                   $(currentList).css("background-color","#373D51");
+                   // marking표시 제거
+                   $("#mark").remove();
+
+                   // 클릭된 곡 색 변경
+                   $(this).css("background-color", "#2b2f3b");
+                   
+                   // 클릭된 곡 marking 표시
+                   var clickedIndex = $(this).index();
+                   var target = $(".singer").get(clickedIndex);
+                   $(target).prepend($("<span id='mark' style='color: mediumspringgreen; margin-right: 10px; font-size:13px'>▶</span>"));
+                   
+                   // 현재 곡 인덱스 최신화
+                   currentIndex = clickedIndex;
+                  // target.append($("<span>fdas</span>"));
+                   
+                  
+      });
+    </script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
