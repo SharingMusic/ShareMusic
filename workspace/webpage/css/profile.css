@@ -85,6 +85,7 @@ img.collection-image {
   -khtml-border-radius: 10%;
   -webkit-border-radius: 10%;
   box-shadow: 5px 5px 5px rgba(0,0,0,.219);
+  /* box-shadow: 0 30px 60px 0 rgba(97,45,45,0.55); */
 
 }
 
@@ -133,6 +134,7 @@ img.collection-image {
 }
 
 .img-hover{
+  
   transform: rotate(90deg) translateY(30px);
  
   transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);

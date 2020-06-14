@@ -143,27 +143,107 @@
             로그인 폼 css
 **********************************************************
  */
- .login-wrapper{
-    position:absolute;
-    top:35%;
-    right:40%;
-    z-index:2;
+ /* login-title */
+.login-title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  width:100%;
+  top:20%;
+  font-size:3rem;
+  font-weight: bold;
+  color:black;
 }
- .login-wrapper.hide{
-     opacity:0;
-     pointer-events: none;
-     transform:translateX(30px);
-     transition: all 0.5s ease-in-out;
-     
- }
- .login-wrapper.show{
-    opacity:1;
-    pointer-events: inherit;
-    transform:translateX(0px);
 
-    transition: all 0.5s ease-in-out;
+.login-title.hide{
+  opacity:0;
+  width:100%;
+  transform:translateX(15px);
+  
 }
- 
+.login-title.show{
+  opacity:1;
+  transform:translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+.login-title .line{
+  height:2px;
+  width: 30px;
+  background-color: black;
+}
+.login-title .horizontal-line{
+  height:15px;
+  width:2px;
+  background-color: black;
+}
+.login-title .line:nth-child(2){
+  margin-right:15px;
+  border-radius: 1px 2px 2px 0;
+}
+.login-title .line:nth-child(4){
+  margin-left:15px;
+  border-radius: 2px 0 1px 2px;
+}
+.login-title .horizontal-line:first-child{
+  transform:translateY(-6.7px);
+  border-radius: 1px 0 2px 2px;
+}
+.login-title .horizontal-line:last-child{
+  transform:translateY(6.7px);
+  border-radius: 2px 2px 1px 0;
+}
+/* login input form : transform*/
+.login-wrapper{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    top:35%;
+    z-index:2;
+    width:100%;
+}
+.login-wrapper.hide{
+     pointer-events: none;   
+}
+.login-wrapper.show{
+    pointer-events: inherit;
+}
+.login-wrapper.hide .form__field{
+  opacity:0;
+  transform:translateX(15px);
+}
+.login-wrapper.hide .text--center{
+  opacity:0;
+  transform:translateX(15px);
+}
+.login-wrapper.show .text--center{
+  opacity:1;
+  transform:translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+.login-wrapper.show .form__field{
+  opacity:1;
+  transform:translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+.login-title.show{
+  transition-delay: 60ms;
+}
+.login-wrapper.show .form__field:nth-child(1){
+  transition-delay: 120ms;
+}
+.login-wrapper.show .form__field:nth-child(2){
+  transition-delay: 180ms;
+}
+.login-wrapper.show .form__field:nth-child(3){
+  transition-delay: 240ms;
+}
+.login-wrapper.show .text--center{
+  transition-delay: 300ms;
+}
+
  
  /* helpers/hidden.css */
 
@@ -180,48 +260,13 @@
   
   /* helpers/icon.css */
   
-  .icons {
-    display: none;
-  }
-  
-  .icon {
+  .login i{
     display: inline-block;
-    fill: #606468;
-    font-size: 16px;
-    font-size: 1rem;
+    color: #606468;
     height: 1em;
     vertical-align: middle;
     width: 1em;
   }
-  
-  /* layout/base.css */
-  
-  /* * {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-  }
-  
-  html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 100%;
-    height: 100%;
-  }
-  
-  body {
-    background-color: #2c3338;
-    color: #606468;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 400;
-    height: 100%;
-    line-height: 1.5;
-    margin: 0;
-    min-height: 100vh;
-  } */
-  
-  /* modules/anchor.css */
   
   a {
     color: #eee;
@@ -232,6 +277,7 @@
   a:focus,
   a:hover {
     text-decoration: underline;
+    color:#eee;
   }
   
   /* modules/form.css */
@@ -253,6 +299,8 @@
   }
   
   .form {
+    width:100%;
+    max-width: 25rem;
     margin: -14px;
     margin: -0.875rem;
   }
@@ -270,6 +318,7 @@
     margin: 14px;
     margin: 0.875rem;
   }
+
   
   .form__input {
     -webkit-box-flex: 1;
@@ -339,5 +388,8 @@
   
   .text--center {
     text-align: center;
+    font-size: 1.2rem;
     color:rgb(131, 131, 131);
   }
+
+

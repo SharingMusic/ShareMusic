@@ -2,6 +2,13 @@ var moveArea = jQuery(document).find('.move-area');
 var leftBtn = jQuery(document).find('.left-btn');
 var rightBtn = jQuery(document).find('.right-btn');
 var submitBtn = jQuery(document).find('.submit-btn');
+var waveBox = jQuery(document).find(".wave-box");
+var colorBoxTop = jQuery(document).find('.color-box-top');
+var colorBoxBottom = jQuery(document).find('.color-box-bottom');
+var main = jQuery(document).find('.main');
+var nav = jQuery(document).find('nav');
+var titleBar = jQuery(document).find('.title-bar');
+
 //왼쪽 화살표를 눌렀을 때
 jQuery(document).on('click touch', '.left-btn',function(e){
     e.preventDefault();
@@ -19,6 +26,30 @@ jQuery(document).on('click touch', '.right-btn',function(e){
     submitBtn.removeClass('submit-btn-hide');   //submit버튼 보이기
     
 });
+//컬렉션 생성 버튼을 눌렀을 때
+jQuery(document).on('click touch', '.submit-btn',function(e){
+    e.preventDefault();
+    //부드럽게 변화주는 css추가
+    waveBox.css('transition','all 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190)');   
+    //main, title, nav 사라지게하기
+    main.addClass('slide');
+    titleBar.addClass('slide');
+    nav.addClass('slide');
+
+    //y축 이동
+    waveBox.css('transform','translateY(-40vh)');
+    //빈공간 coloBox로 채우기
+    colorBoxBottom.animate({
+        height: '40vh'
+    },1500);
+
+
+    //Loading글씨 띄우기
+    colorBoxBottom.children().delay(1700).fadeIn(500);
+});
+
+  // "y" is arbitrary used as the key name 
+  
 
 jQuery(document).ready(function(){
     var fileTarget = jQuery('.filebox .upload-hidden');

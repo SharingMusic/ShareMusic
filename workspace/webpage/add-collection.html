@@ -1,7 +1,7 @@
 <!doctype html>
 
 <head>
-    <title></title>
+    <title>Add Collection</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -9,20 +9,46 @@
 
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-
+    <!-- 외부 Css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <!-- Custom Style CSS -->
     <link rel="stylesheet" href=".\css\init.css" />
     <link rel="stylesheet" href=".\css\menu.css" />
-    <link rel="stylesheet" href=".\css\mainPage.css" />
+    <link rel="stylesheet" href=".\css\title-bar.css" />
+    <link rel="stylesheet" href=".\css\wave.css">
+    <link rel="stylesheet" href=".\css\login-page.css">
+    <link rel="stylesheet" href=".\css\profile.css" />
+    <link rel="stylesheet" href=".\css\follow-modal.css" />
+
+    <!-- Font Css -->
+    <link href="//db.onlinewebfonts.com/c/edeb336ecd776e23d99355eb2b52cbc7?family=NeuzeitGroteskW01-Regular"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href=".\css\init.css" />
+    <link rel="stylesheet" href=".\css\menu.css" />
     <link rel="stylesheet" href=".\css\title-bar.css" />
     <link rel="stylesheet" href=".\css\add-collection.css" />
 
 </head>
 
-
-
-
 <body>
+    <div class="color-box-top"></div>
+  <div class="wave-box">
+    <canvas></canvas>
+    
+  </div>
+  <div class="color-box-bottom">
+    <div class="loading">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+  </div>
     <header>
         <div class="title-bar">
             <div class="title">
@@ -61,7 +87,8 @@
                 </select>
             </div>
         </div>
-
+        
+        <div class="blur"></div>
         <nav>
             <div class="menu-btn">
                 <div class="line line--1"></div>
@@ -246,7 +273,7 @@
 
 
             <!-- 화살표 버튼 -->
-            <div class="blank-block-left"></div>
+            
             <div class="left-btn left-btn-hide">
                 <span class="btn btn-link">
                     <i class="fas fa-caret-left"></i>
@@ -263,11 +290,12 @@
                     <i class="fas fa-angle-double-right" title="컬렉션 생성"></i>
                 </span>
             </div>
-            <div class="blank-block-right"></div>
+  
 
 
         </div>
     </section>
+    <!-- jquery js file -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -278,8 +306,20 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <script src="./js/add-collection.js"></script>
+    <!-- wave js file -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js'></script>
+
+    <!-- Google jquery js File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom js file -->
     <script src="./js/menu.js"></script>
     <script src="./js/user-dropdown-btn.js"></script>
     <script src="./js/search.js"></script>
+    <script src="./js/wave.js"></script>
+    <script src="./js/login-page.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/add-collection.js"></script>
+
 </body>

@@ -15,6 +15,13 @@ header{
   align-items: center;
   justify-content: right;
 }
+.title-bar.slide{
+  transition: all 800ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translate(-15px);
+  opacity:0;
+  pointer-events: none;
+}
+
 
 .title-bar .title {
   position: absolute;

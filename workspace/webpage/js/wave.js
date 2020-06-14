@@ -1,3 +1,28 @@
+/*========================================
+            move-wave-box height
+              ========================================*/
+var waveBox = jQuery(document).find(".wave-box");
+var colorBoxTop = jQuery(document).find(".color-box-top");
+var colorBoxBottom = jQuery(document).find(".color-box-bottom");
+
+jQuery(document).ready(function(){
+  if(jQuery(this).find('.profile-image').length){
+      waveBox.css('transform','translateY(50vh)');
+      colorBoxTop.css('height','50vh');
+  } 
+  if(jQuery(this).find('.move-area').length){
+    waveBox.css('transform','translateY(30vh)');
+    colorBoxTop.css('height','30vh');
+  } 
+  if(jQuery(this).find('main__page')){
+    waveBox.css('transform','translateY(30vh)');
+    colorBoxTop.css('height','30vh');
+  }
+});
+
+/*========================================
+            
+              ========================================*/
 const gui = new dat.GUI(),
 guiSet = {
   frequency: 5,
@@ -115,3 +140,4 @@ $.loop = () => {
    ========================================*/
 
 $.init();
+

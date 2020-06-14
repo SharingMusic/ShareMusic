@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Main</title>
+    <title>Collection</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -10,23 +10,29 @@
     />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- FontAwesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!-- 외부 Css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <!-- Custom Style CSS -->
     <link rel="stylesheet" href=".\css\init.css" />
     <link rel="stylesheet" href=".\css\menu.css" />
     <link rel="stylesheet" href=".\css\title-bar.css" />
+    <link rel="stylesheet" href=".\css\wave.css">
+    <link rel="stylesheet" href=".\css\login-page.css">
+    <link rel="stylesheet" href=".\css\profile.css" />
+    <link rel="stylesheet" href=".\css\follow-modal.css" />
+
+    <!-- Font Css -->
+    <link href="//db.onlinewebfonts.com/c/edeb336ecd776e23d99355eb2b52cbc7?family=NeuzeitGroteskW01-Regular"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href=".\css\init.css" />
+    <link rel="stylesheet" href=".\css\menu.css" />
+    <link rel="stylesheet" href=".\css\title-bar.css" />
+    <link rel="stylesheet" href=".\css\add-collection.css" />
     <link rel="stylesheet" href=".\css\collection.css" />
     <link rel="stylesheet" href=".\css\modal.css" />
     <link rel="stylesheet" href=".\css\like-modal.css" />
@@ -35,6 +41,11 @@
 
 
   <body>
+    <div class="color-box-top"></div>
+  <div class="wave-box">
+    <canvas></canvas>
+  </div>
+  <div class="color-box-bottom"></div>
     <header>
       <!-- Nav + Title Bar -->
       <div class="title-bar">
@@ -66,7 +77,7 @@
           </select>
         </div>
       </div>
-
+      <div class="blur"></div>
       <nav>
         <div class="menu-btn">
           <div class="line line--1"></div>
@@ -820,11 +831,6 @@
       </div>
     </section>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
 
     <script type="text/javascript">
 
@@ -864,18 +870,30 @@
       });
     </script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/user-dropdown-btn.js"></script>
-    <script src="./js/search.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+<!-- wave js file -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js'></script>
+
+<!-- Google jquery js File -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Custom js file -->
+<script src="./js/menu.js"></script>
+<script src="./js/user-dropdown-btn.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/wave.js"></script>
+<script src="./js/login-page.js"></script>
+<script src="./js/profile.js"></script>
+<script src="./js/add-collection.js"></script>
   </body>
 </html>

@@ -10,8 +10,25 @@ nav {
   transition: all 800ms cubic-bezier(0.8, 0, 0.33, 1);
   border-radius: 0% 0% 100% 50%;
 }
-nav.nav-open{
-  box-shadow: 0 30px 80px 0 rgba(97, 45, 45, 0.25);
+nav.slide{
+  transition: all 800ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translate(-315px);
+  opacity:0;
+  pointer-events: none;
+}
+.blur{
+  position:absolute;
+  z-index:-1;
+ 
+  opacity: 0;
+  transition: all 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  background-color:rgba(224, 221, 209, 0.8);
+  width:100vw;
+  height:100vh;
+}
+.blur.open{
+  z-index:2;
+  opacity: 1;
 }
 nav .menu-btn {
   position: absolute;
@@ -92,7 +109,8 @@ nav .nav-links .link {
 nav.nav-open {
   transform: translateX(0px);
   border-radius: 0% 0% 0% 0%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255);
+  box-shadow: 0 30px 80px 0 rgba(97, 45, 45, 0.25);
 }
 nav .nav-links.fade-in {
   opacity: 1;
