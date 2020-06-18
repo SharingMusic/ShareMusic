@@ -6,6 +6,7 @@ var lineThree = document.querySelector('nav .menu-btn .line--3');
 var link = document.querySelector('nav .nav-links');
 var title = document.querySelector('.title');
 var blur = document.querySelector('.blur')
+/* 클릭시 토글 기능 */
 menuBtn.addEventListener('click', () => {
     nav.classList.toggle('nav-open');
     lineOne.classList.toggle('line-cross');

@@ -1,5 +1,5 @@
 /*========================================
-            move-wave-box height
+           wave-box Location 설정
               ========================================*/
 var waveBox = jQuery(document).find(".wave-box");
 var colorBoxTop = jQuery(document).find(".color-box-top");
@@ -14,10 +14,11 @@ jQuery(document).ready(function(){
     waveBox.css('transform','translateY(30vh)');
     colorBoxTop.css('height','30vh');
   } 
-  if(jQuery(this).find('main__page')){
+  else if(jQuery(this).find('.main__page').length){
     waveBox.css('transform','translateY(30vh)');
     colorBoxTop.css('height','30vh');
   }
+
 });
 
 /*========================================
@@ -25,7 +26,7 @@ jQuery(document).ready(function(){
               ========================================*/
 const gui = new dat.GUI(),
 guiSet = {
-  frequency: 5,
+  frequency: 5,     //파장?
   reset: () => {
     $.reset();
   } };

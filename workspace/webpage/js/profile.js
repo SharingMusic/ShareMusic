@@ -1,6 +1,6 @@
 var imgWrapper = jQuery(document).find(".img-wrapper");
 
-
+/* 마우스 올렷을 때, 벗어났을 때 */
 imgWrapper.hover(function(e){
     jQuery(this).addClass('img-hover');
     jQuery(this).find('.collection-info-fade').fadeIn(800);

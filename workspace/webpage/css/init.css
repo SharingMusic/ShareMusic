@@ -54,7 +54,6 @@ div {
   width: 100vw;
   padding-left: 0vw;
   padding-right: 0vw;
-/*   background-color: #ebcdcd; */
 }
 .main.slide{
   transition: all 800ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
